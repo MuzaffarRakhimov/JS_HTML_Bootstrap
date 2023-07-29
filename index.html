@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Navbar</span>
+            <div class="navbarContext d-flex justify-content-around text-light align-items-center">
+                <li class="navbarText">Home</li>
+                <li class="navbarText">About</li>
+                <li class="navbarText">Team</li>
+                <li class="navbarText">Support</li>
+                <li class="navbarText">Help</li>
+                <button class="btn btn-outline-warning">Login</button>
+                <input type="checkbox" id="mode">
+
+                <button class="btn btn-light" onclick=toEnd()><i class="bi bi-arrow-down"></i></button>
+
+            </div>
+            <i class="bi bi-list d-xl-none d-block menu"></i>
+        </div>
+    </nav>
+    <div class="card p-5 mx-auto mt-5">
+        <div class="input-group">
+            <input type="text" class="form form-control input" placeholder="Type here...">
+            <button class="btn btn-primary" id="sendBtn">Send</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="input-group mx-auto p-4 mt-3 d-flex w-50 border border-secondary rounded">
+        <input type="number" class="form-control" id="value1">
+        <select class="form-select" aria-label="Default select example" id="select">
+            <option selected>Amallarni tanlang</option>
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+
+        <input type="number" class="form-control" id="value2">
+        <button class="btn btn-success px-4" id="resultBtn">=</button>
+        <button class="btn btn-outline-success px-4" id="resultTxt"></button>
+    </div>
+
+
+
+
+    <div class="modal d-block" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" id="closeX"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="mb-3">Sizning ismingiz <span class="text"></span>. Shundaymi?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="close">Yo'q</button>
+                    <button type="button" class="btn btn-success" id="save">Ha</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mx-auto p-4 my-4">
+        <select id="colorPicker" class="form-select" aria-label="Default select example">
+            <option selected>Ranglarni tanlang</option>
+            <option value="white">Oq</option>
+            <option value="black">Qora</option>
+            <option value="blue">Ko'k</option>
+            <option value="green">Yashil</option>
+            <option value="yellow">Sariq</option>
+            <option value="red">Qizil</option>
+        </select>
+        <div class="colorZone"></div>
+
+    </div>
+    <div class="card mx-auto p-4 my-4">
+        <select id="imgPicker" class="form-select" aria-label="Default select example">
+            <option selected>Rasm turini tanlang</option>
+            <option value="nature">Tabiat</option>
+            <option value="cars">Avtomobillar</option>
+            <option value="animals">Hayvonot olami</option>
+        </select>
+        <img class="imgZone rounded" src="https://protkd.com/wp-content/uploads/2017/04/default-image.jpg" alt="img">
+    </div>
+
+    <div class="card mx-auto p-4 my-4" id="cardsWrapper">
+        <button class="btn btn-primary" id="addCards">Add card</button>
+        <div class="cardArea d-flex justify-content-around flex-wrap" id="newCards"></div>
+    </div>
+
+    <div class="w-50 mx-auto p-3 my-4 scrollCard">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Ea expedita tenetur sint distinctio provident maxime,
+        voluptatum cupiditate optio quaerat iure totam facilis nam molestias maiores harum cum repellendus rerum eos
+        quas laudantium ducimus architecto explicabo! Quasi, voluptate? Ipsa soluta non delectus similique consequuntur
+        nostrum quae voluptates nobis velit ut corporis nisi itaque aspernatur, tempora incidunt officia! Iste dolorum
+        dolorem autem? Neque unde magnam quae molestiae odit animi nesciunt expedita ipsam eligendi nostrum,
+        iusto facilis consequuntur asperiores exercitationem, harum delectus esse dicta modi quasi, pariatur quam fugit
+        cum enim! Aliquid necessitatibus labore rem! Sint saepe laudantium laboriosam assumenda. Laudantium, suscipit
+        numquam doloremque fugiat placeat corrupti libero itaque repellendus sequi voluptate id ut tenetur ad dolor
+        corporis facilis praesentium commodi ea iste. Error repellendus aperiam nihil qui optio? Eius ullam quo,
+        accusamus deleniti temporibus doloribus delectus ipsum adipisci quas repudiandae, aliquam itaque reprehenderit
+        natus veritatis odio hic vero corporis pariatur totam, provident modi dolores quis? Saepe, obcaecati unde qui
+        adipisci explicabo provident corrupti fugiat quidem blanditiis veritatis ab in aspernatur iste officia, facilis
+        dolorem molestias hic illo sit accusantium alias dicta voluptatibus impedit. Cum perferendis voluptatibus animi
+        facere fugit,
+        quos commodi quisquam rem? Expedita nesciunt quidem eligendi! Architecto quaerat sed praesentium, exercitationem
+        modi dignissimos delectus quas error ducimus non nostrum perspiciatis tempora aliquam, illo corrupti reiciendis
+        perferendis, cumque aliquid sint reprehenderit? Incidunt dolor quam pariatur doloribus, reiciendis animi
+        molestiae est nesciunt? Sequi nostrum dolores laudantium?
+        Eos et rem esse velit dolor, nam voluptatem sint expedita nobis in amet facere sunt facilis sequi voluptate
+        eveniet ullam culpa porro inventore ipsa quod dolorem? Voluptatem consectetur dolorum saepe fugiat aut
+        praesentium iusto adipisci autem atque? Eaque, enim magni error, velit molestias qui illum alias quo rerum
+        quidem culpa, at saepe amet neque nam ratione autem soluta cupiditate debitis! Facilis impedit molestiae vero
+        esse, delectus dolor totam minima id.
+        Officiis, accusantium nam consectetur non ea laudantium deleniti assumenda distinctio hic modi quis reiciendis
+        praesentium dolores eligendi dolore! Nesciunt temporibus repellat sequi hic maxime! Inventore culpa harum
+        adipisci iste, aspernatur mollitia quam natus, recusandae aut, earum porro hic? Deserunt est repudiandae eveniet
+        maxime nihil, exercitationem iste veniam. Officia dolor ullam maiores architecto, in voluptatibus sapiente. Aut,
+        doloribus suscipit ut earum,
+        repellat reprehenderit quaerat id beatae amet accusamus consectetur fugiat! Corporis nostrum labore enim sit
+        consequuntur exercitationem, similique doloribus voluptatum culpa molestiae quisquam sint vitae totam odio
+        libero nisi facilis perferendis ad numquam saepe, alias soluta? Vero quos impedit dignissimos earum corporis
+        dolore quae odit. Repellat sint incidunt repudiandae, consequatur voluptatem nihil cumque officia, eum quam
+        itaque facere quia dignissimos earum,
+        vel atque quis tenetur magnam? Architecto est nulla magnam ratione alias iste, ea, tempore maxime beatae modi
+        vel ipsum quidem quis et ipsa voluptatibus harum. Ducimus et, officia excepturi temporibus neque veniam eligendi
+        nulla ab corrupti nam sed officiis vero quam veritatis exercitationem placeat rem tenetur esse quas harum sint!
+        Ex dicta quis magni asperiores architecto et vel? Cumque, asperiores reiciendis. Quas similique maiores maxime
+        dolorem doloribus dicta
+        quis magni aspernatur accusantium voluptatibus aperiam quasi illum a, cupiditate neque perspiciatis commodi
+        soluta nesciunt repellendus itaque, ex inventore veritatis blanditiis. Nulla dicta quo deserunt sunt non maxime
+        quod reiciendis, veritatis autem provident laboriosam temporibus possimus eaque voluptas quisquam perferendis
+        nisi ex aliquam asperiores? Repudiandae itaque commodi, labore ipsam beatae ut odit fuga consequatur rerum
+        cumque sit et optio
+        hic facilis? Voluptas tenetur incidunt minima reiciendis aliquid atque provident nemo deleniti! Fugit assumenda
+        provident dignissimos quas dicta recusandae sunt numquam explicabo repudiandae voluptatibus, dolore velit,
+        exercitationem adipisci quaerat reiciendis eos quos magni veritatis doloribus odio dolorum. Eum rem voluptate
+        saepe. Fugit eaque, similique, doloremque praesentium molestiae quos ipsum officia non nam, inventore voluptates
+        pariatur commodi
+        distinctio id molestias! Nihil adipisci aliquid deserunt asperiores magni. Doloribus vel quod quos praesentium
+        neque mollitia ullam! Perspiciatis nihil, esse autem voluptas blanditiis perferendis, repudiandae nulla
+        deserunt, enim architecto id illum! Placeat sequi, facere iste excepturi voluptatem quis quam officia id illo
+        dolores, eius officiis cupiditate sunt maiores amet harum explicabo repellendus quibusdam perferendis blanditiis
+        voluptatibus? Dolores
+        excepturi provident nemo, voluptates ratione, porro nostrum eligendi et alias labore, totam quisquam!
+        Consequatur ipsam deserunt facere saepe odio voluptas ullam ea facilis ab, quae exercitationem illum cum iusto
+        sint dolores ad. Dicta ipsa, odit itaque illum voluptatibus accusantium dolor dolore labore facilis expedita
+        molestias, repellendus fugiat tenetur et exercitationem nemo consequuntur facere deleniti esse eos cupiditate
+        officiis inventore non?
+        Omnis dolores cum vitae iusto. Autem minima vel neque, nulla velit voluptatum molestiae animi repellendus
+        pariatur nesciunt eum dolorum, eius accusantium suscipit, nihil harum necessitatibus nostrum. Quas, labore
+        doloremque provident cum natus expedita maxime ipsum inventore assumenda facilis sunt quae, ex ipsam fuga
+        eveniet nostrum, aspernatur reprehenderit laudantium sit? Reprehenderit voluptate iste provident! Voluptatum
+        totam unde accusamus beatae dolorum,
+        perspiciatis repellendus repudiandae! Iure veritatis officiis accusamus tempore facilis alias, est molestias
+        quidem sit. Libero aut dolores dolore!
+    </div>
+
+</body>
+<script src="./app.js"></script>
+
+</html>
